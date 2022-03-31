@@ -1,31 +1,29 @@
 programa
 {
-	inclua biblioteca Matematica-->mat
-//João, homem de bem, comprou um microcomputador para controlar o rendimento diário de seu trabalho.
-//Toda vez que ele traz um peso de tomate maior que o estabelecido pelo regulamento do estado de São Paulo (50 quilos)
-//deve pagar um multa de R$ 4,00 por quilo excedente. João precisa que você faça um sistema que leia a
-//variável P (peso de tomates) e verifique se há excesso. Se houver, gravar na variável E (Excesso) e 
-//na variável M o valor da multa que João deverá pagar. Caso contrário mostrar tais variáveis com o conteúdo ZERO.
-
+/*
+ * Faça um programa que crie um vetor por leitura com 5 valores de pontuação de uma
+atividade e o escreva em seguida. Encontre após a maior pontuação e a apresente.
+ */
 	
 	funcao inicio()
 	{
-		real pesoNovo, excessoPagar, multa = 4.00
-		inteiro pesoFixo = 50
+		inteiro pontuacao [5], m = 0
 
-
-		escreva("Informe o valor do peso total de tomates: ")
-		leia(pesoNovo)
-
-		
-
-		se (pesoNovo > 50.00){
-			excessoPagar = (pesoNovo - pesoFixo) * multa
-			escreva("Você precisa pagar uma multa de ", mat.arredondar(excessoPagar,1), " Reais, pois execedeu o pesso máximo")
+		para(inteiro i = 0; i < 5; i++){
+			escreva("Digite a pontuação: ")
+			leia(pontuacao[i])
 			}
-			senao {
-				escreva("Valor da munta a ser paga é ZERO!!")
-				}
+
+			para(inteiro i = 0; i < 5; i++){
+			escreva(" | ", pontuacao[i])
+			
+			se ( pontuacao[i] > m){
+				m = pontuacao[i]
+			}
+		}
+	      
+		escreva("\n","A maior pontuação é: ", m)
+	
 	}
 }
 /* $$$ Portugol Studio $$$ 
@@ -33,7 +31,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 684; 
+ * @POSICAO-CURSOR = 476; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

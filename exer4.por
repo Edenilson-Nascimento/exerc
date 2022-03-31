@@ -1,39 +1,33 @@
 programa
 {
-/*
- * Faça um sistema que leia um número inteiro e mostre uma mensagem indicando se este
-número é par ou ímpar, e se é positivo ou negativo.
- */
 	
 	funcao inicio()
-	{
-	     inteiro num
-	     
-		escreva("Escreva um número: ")
-		leia(num)
+	{    inteiro notas[3][3], resul= 0, l, c 
 
-		se (num % 2 == 1 e num >= 0){
-			escreva("esse numero é impa positivo")
+	
+		para ( l = 0; l < 3; l++){
+			para( c = 0; c < 3; c++){
+				escreva("escreva notas, " ,"\n")
+				leia(notas[l][c])
+				resul = resul + notas[l][c]
+			}	
 		}
-		senao se(num % 2 == 1 e num < 0){
-			escreva("esses número é impa negativo")
-		}
-		senao se(num % 2 == 0 e num >= 0){
-			escreva("esse numero é par positivo ")
-		} 
-		senao{
-			escreva("esse numero é par negativo ")
-		}
+		
+		escreva("O valor total da matriz é: ",resul, "\n")
+		resul = notas[0][0] + notas[1][1] + notas[2][2]
+		escreva("E a soma da diagonal é: ",resul)
+
 	}
+
 }
 /* $$$ Portugol Studio $$$ 
  * 
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 328; 
+ * @POSICAO-CURSOR = 197; 
  * @PONTOS-DE-PARADA = ;
- * @SIMBOLOS-INSPECIONADOS = ;
+ * @SIMBOLOS-INSPECIONADOS = {notas, 5, 15, 5};
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;
  * @FILTRO-ARVORE-TIPOS-DE-SIMBOLO = variavel, vetor, matriz, funcao;
  */
